@@ -1,0 +1,217 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  padding-top: 20px;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 10;
+  align-items: center;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+header img:hover {
+  opacity: 0.5;
+  /*透明の時間指定*/
+  transition: all 0.7s;
+}
+header a:hover {
+  opacity: 0.5;
+  /*透明の時間指定*/
+  transition: all 0.7s;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 10px 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.container .head-title img {
+  width: 70%;
+}
+
+#nav {
+  /*ゆっくりフェードインさせる*/
+  opacity: 0;
+  transition: all 0.7s;
+}
+#nav a {
+  color: white;
+}
+
+.open #nav {
+  padding: 30px 50px;
+  position: fixed;
+  left: 0;
+  z-index: 20;
+  display: block;
+  opacity: 9;
+  cursor: pointer;
+}
+.open #nav ul {
+  transition: all 0.7s;
+}
+.open #nav li {
+  padding-bottom: 15px;
+  font-size: 15px;
+}
+
+/*二重線の表示*/
+.toggle-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+}
+.toggle-btn span {
+  width: 30px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: black;
+  position: absolute;
+  display: block;
+  transition: all 0.7s;
+}
+
+.open .toggle-btn {
+  color: white;
+  cursor: pointer;
+  z-index: 40;
+  transition: all 0.7s;
+}
+.open .toggle-btn span {
+  background-color: white;
+}
+
+.toggle-btn span:nth-child(1) {
+  top: 10px;
+}
+
+.toggle-btn span:nth-child(2) {
+  bottom: 10px;
+}
+
+.open .toggle-btn span:nth-child(1) {
+  transform: translateY(4px) rotate(-45deg);
+  opacity: 0.5;
+  /*透明の時間指定*/
+  transition: all 0.7s;
+}
+
+.open .toggle-btn span:nth-child(2) {
+  transform: translateY(-4px) rotate(45deg);
+  opacity: 0.5;
+  /*透明の時間指定*/
+  transition: all 0.7s;
+}
+
+#mask {
+  display: none;
+}
+
+.open #mask {
+  opacity: 0.5;
+  /*透明の時間指定*/
+  transition: all 0.7s;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+.main {
+  max-width: 1300px;
+  padding: 10px 40px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 0px;
+}
+.main h1 {
+  padding-bottom: 40px;
+  font-weight: normal;
+  font-size: 15px;
+}
+.main .main-wrapper {
+  max-width: 820px;
+}
+.main .main-wrapper .company-wrapper {
+  width: 70%;
+}
+
+dl {
+  font-size: 17px;
+  width: 70%;
+  display: flex;
+}
+dl .dt-list {
+  width: 20%;
+  border-bottom: 1px solid #dcdbdb;
+  padding: 20px 10px;
+}
+dl .dd-list {
+  border-bottom: 1px solid #dcdbdb;
+  padding: 20px 10px;
+  width: 40%;
+}
+dl .last-dt {
+  width: 20%;
+  padding: 20px 10px;
+}
+dl .last-dd {
+  padding: 20px 10px;
+  width: 40%;
+}
+
+.foot {
+  max-width: 1300px;
+  padding: 10px 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.foot ul {
+  display: flex;
+}
+.foot li {
+  margin-right: 30px;
+  font-size: 12px;
+}
+.foot a:hover {
+  opacity: 0.5;
+  /*透明の時間指定*/
+  transition: all 0.7s;
+}
+
+iframe {
+  filter: grayscale(100%);
+  transition: all 0.7s ease;
+  padding-top: 20px;
+}/*# sourceMappingURL=company.css.map */
